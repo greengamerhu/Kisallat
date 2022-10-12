@@ -80,13 +80,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     document.getElementById("stat").addEventListener("click", () => { 
         console.log("asd")
-        let  egeszseges = eteleklist.filter(e => e.kaloria )
+        let  egeszseges = eteleklist.filter(e => e.kaloria < 200 )
         egeszseges.sort((e1, e2) => {
             if (e1.kaloria > e2.kaloria) {return 1}
             else if (e1.kaloria < e2.kaloria) {return -1}
             else {return 0}
         });
         console.log(egeszseges)
+
+        let szovegeslista = []
+        
     })
 
     
